@@ -25,7 +25,7 @@
 			<?php endif; // is_single() ?>
 			<?php if ( comments_open() ) : ?>
 				<div class="comments-link">
-					<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Reply', 'twentytwelve' ), __( '% Replies', 'twentytwelve' ) ); ?>
+					<?php //comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'twentytwelve' ) . '</span>', __( '1 Reply', 'twentytwelve' ), __( '% Replies', 'twentytwelve' ) ); ?>
 				</div><!-- .comments-link -->
 			<?php endif; // comments_open() ?>
 		</header><!-- .entry-header -->
@@ -39,6 +39,11 @@
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
+	<div class="postmetadata">
+		<?php the_tags( ' ', ', ', ''); ?>
+		<?php comments_popup_link('0', '1', '%', 'commentCount'); ?>
+	</div>
+		
 		<?php endif; ?>
 
 		<footer class="entry-meta">
