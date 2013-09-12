@@ -1173,22 +1173,22 @@ article.format-quote .entry-content blockquote {
 -------------------------------------------------------------- */
 
 .comments-title {
-	margin-bottom: 48px;
-	margin-bottom: 3.428571429rem;
+	/*margin-bottom: 48px;*/
+	/*margin-bottom: 3.428571429rem;*/
 	/*font-size: 16px;*/
 	/*font-size: 1.142857143rem;*/
 	line-height: 1.5;
 	font-weight: normal;
 }
 .comments-area article {
-	margin: 24px 0;
-	margin: 1.714285714rem 0;
+	/*margin: 24px 0;*/
+	/*margin: 1.714285714rem 0;*/
 }
 .comments-area article header {
 	margin: 0 0 48px;
 	margin: 0 0 3.428571429rem;
 	overflow: hidden;
-	position: relative;
+	/*position: relative;*/
 }
 .comments-area article header img {
 	float: left;
@@ -1198,8 +1198,8 @@ article.format-quote .entry-content blockquote {
 .comments-area article header cite,
 .comments-area article header time {
 	display: block;
-	margin-left: 85px;
-	margin-left: 6.071428571rem;
+	/*margin-left: 85px;*/
+	/*margin-left: 6.071428571rem;*/
 }
 .comments-area article header cite {
 	font-style: normal;
@@ -1784,7 +1784,7 @@ hgroup { display: inline-block;}
 
 /*{ border-top: 5px solid #F2F2F2; }	*/
 #primary article { 
-	box-shadow: inset 5px 0 0 #F2F2F2; 
+	/*box-shadow: inset 5px 0 0 #F2F2F2; */
 	/*border-bottom: 5px solid #F2F2F2; */
 	}
 .entry-content a { 
@@ -1939,12 +1939,17 @@ form input[type="text"] {
 }
 .nav-single + .comments-area,
 #comment-nav-above {
-		padding-top: 20px;
+		/*padding-top: 20px;*/
  }
-.postdate { font-family: "Lato"; color: #aaa; position: absolute; left: -35px; top: 65px; border: 5px solid #efefef; border-radius: 50px; line-height: 35px; background-color: #fff; padding: 8px; }
+.postdate { font-family: "Lato"; color: #aaa; position: absolute; left: -45px; top: 65px; border: 5px solid #efefef; border-radius: 50px; line-height: 35px; background-color: #fff; padding: 8px; }
 .site-content article { position: relative; }
 .postdate small { font-size: 1.5rem; font-weight: 100;padding-right: 10px; padding-left: 10px; } 
 .postdate div { line-height: 15px; padding-left: 10px; padding-right: 10px; }
+.comments-area .comment-author img { border: 5px solid #efefef; border-radius: 50px; padding: 8px; position: absolute; left: -42px; top: 70px; background-color: #fff;}
+.commentlist { position: relative; }
+.comments-title { padding-left: 10px; }
+.nav-previous { padding-left: 10px; }
+#content { box-shadow: inset 5px 0 0 rgb(242, 242, 242); padding-left: 10px;}
 
 																								/* MEDIA QUERIES */ 
 
@@ -1969,6 +1974,10 @@ form input[type="text"] {
 													#searchField { position: absolute; top: 0; z-index: 10; right: 5px; margin: 0; float: none; width: auto; height: auto; color: black; }
 													#searchField input[type="text"] { color: #000; }
 													.postdate { display: none; }
+													.comments-area .comment-author img { position: relative; left: 0; top: 0; }
+													.nav-previous { box-shadow: none; }
+													.comments-title { box-shadow: none; }
+													#content { box-shadow: none; }
 
 }
 			

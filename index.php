@@ -18,7 +18,7 @@
 get_header(); ?>
 <div id="searchField"> 
 				<?php include ('searchform.php' ); ?>
-			</div>
+</div>
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
