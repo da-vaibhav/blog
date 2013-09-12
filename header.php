@@ -25,6 +25,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'>
+<script rel="script" type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -34,11 +36,22 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
+<div id="mobileNav">
+	<a id="navIcon" href="#"></a>
+</div>
+<nav class="mobnav">
+	<ul>
+		<li> menu one </li>
+		<li>	menu one </li>
+	</ul>
+</nav>
+
+
 	<header id="masthead" class="site-header" role="banner">
 		<hgroup>
 			<h1 class="site-title">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>
-			<img src="<?php bloginfo('template_directory'); ?>/images/blog-logo.png" alt="<?php bloginfo('name'); ?>">
+			<img src="<?php bloginfo('template_directory'); ?>/images/blog-logo-copy4.png" alt="<?php bloginfo('name'); ?>">
 			</a>
 			</h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>

@@ -35,14 +35,24 @@
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 		<?php else : ?>
+			<div class="postdate">
+					<div><?php the_time('M') ?></div>
+					<small><?php the_time('d') ?></small>
+			</div>
 		<div class="entry-content">
+		
+
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
+			<div class="postmetadata">
+				<?php the_tags( ' ', ', ', ''); ?>
+				<?php comments_popup_link('0', '1', '%', 'commentCount'); ?>
+			</div>
 		</div><!-- .entry-content -->
-	<div class="postmetadata">
-		<?php the_tags( ' ', ', ', ''); ?>
-		<?php comments_popup_link('0', '1', '%', 'commentCount'); ?>
-	</div>
+		<!-- <div class="postdate">
+					<strong><?php //the_time('M') ?></strong>
+					<small><?php //the_time('d') ?></small>
+			</div> -->
 		
 		<?php endif; ?>
 

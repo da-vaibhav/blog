@@ -484,3 +484,10 @@ function twentytwelve_customize_preview_js() {
 	wp_enqueue_script( 'twentytwelve-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20130301', true );
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
+
+
+
+function new_excerpt_more( $more ) {
+	return '<div class="readmore"> <a class="read-more btn" href="'. get_permalink( get_the_ID() ) . '">Read More</a> </div>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );

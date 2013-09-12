@@ -1,3 +1,4 @@
+
 <?php
 /**
  * The main template file.
@@ -15,11 +16,9 @@
  */
 
 get_header(); ?>
-
-			<div id="searchField"> 
+<div id="searchField"> 
 				<?php include ('searchform.php' ); ?>
 			</div>
-
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
@@ -27,19 +26,8 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
-
-				<div class="meta">
-					<strong><?php the_time('M') ?></strong>
-					<small><?php the_time('d') ?></small>
-					<?//php the_author() ?>
-					<?php //comments_popup_link('0', '1', '%', 'comments-link', ''); ?>
-				</div>
-
-
 			<?php endwhile; ?>
-
 			<?php twentytwelve_content_nav( 'nav-below' ); ?>
-
 		<?php else : ?>
 
 			<article id="post-0" class="post no-results not-found">
