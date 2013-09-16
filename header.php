@@ -38,6 +38,12 @@
 <div id="page" class="hfeed site">
 <div id="mobileNav">
 	<a id="navIcon" href="#"></a>
+	<ul>
+	<?php //wp_get_archives( array( 'type' => 'monthly', 'limit' => 12 ) ); ?>
+	<?php //wp_get_archives('type=postbypost'); ?>
+	<!-- <a href="index.php?page_id=42">Page title</a> -->
+	</ul>
+
 </div>
 <nav class="mobnav">
 	<ul>
