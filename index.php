@@ -16,11 +16,15 @@
  */
 
 get_header(); ?>
-<div id="searchField"> 
-				<?php include ('searchform.php' ); ?>
-</div>
 
 	<div id="primary" class="site-content">
+	<!-- <div class="searchform" >
+			<?php //get_search_form(); ?>
+		
+	</div> -->
+	<div id="searchField"> 
+				<?php include ('searchform.php' ); ?>
+</div>
 		<div id="content" role="main">
 		<?php if ( have_posts() ) : ?>
 			<?php /* Start the Loop */ ?>

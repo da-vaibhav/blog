@@ -24,8 +24,8 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'>
-<script rel="script" type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
@@ -46,10 +46,6 @@
 
 </div>
 <nav class="mobnav">
-	<ul>
-		<li> menu one </li>
-		<li>	menu one </li>
-	</ul>
 </nav>
 
 
