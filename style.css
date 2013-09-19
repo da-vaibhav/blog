@@ -4,6 +4,7 @@ Theme URI: http://wordpress.org/themes/twentytwelve
 Author: vaibhav chatarkar
 Author URI: www.vinodsobale.com
 Description: We’re a small, tight-knit team of Ruby on Rails developers with a lot of experience in the startup world. We believe in fast delivery, common sense solutions, doing what we love, and getting it right the first time.
+Version: 1.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, gray, white, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -1571,7 +1572,7 @@ img#wpstats {
 /* Minimum width of 960 pixels. */
 @media screen and (min-width: 960px) {
 	body {
-		/*background-color: #e6e6e6;*/
+	<!--	background-color: #e6e6e6; -->
 		background-color: #fff;
 	}
 	body .site {
@@ -1725,9 +1726,13 @@ img#wpstats {
 	/*padding-top: 100px;*/
 }																									
 p { 
-	color: #aaa;
-	font-family: "Lato";
+	/*color: #aaa;*/
+	/*font-family: "Lato";*/
 	font-weight: 300;
+	color: #777777;
+   font-family: helvetica,arial;
+   font-size: 1rem;
+   font-weight: 300;
 }
 p a {
 	font-weight: 300;
@@ -1771,8 +1776,8 @@ hgroup { display: inline-block;}
 	line-height: 25px; 
 	font-size: 1.03rem;  
 	}
-.entry-content p img { border: 5px solid #F2F2F2; }
-.entry-content p img:hover { border:5px solid #DE6D56; }
+.entry-content p img { border: 5px solid #F2F2F2 !important; }
+.entry-content p img:hover { border:5px solid #DE6D56 !important; }
 .entry-header .entry-title a { 
 						font-size: 1.8125rem;
 						line-height: 36px; 
@@ -1869,7 +1874,7 @@ a.btn:hover { background-color: #E87B65; color: #FFF; }
 .wpp-list a { color: #aaa; font-size: .875rem; font-weight: 300; padding-right: 10px; }
 .wpp-list a:hover { color: #e87b65; }
 .wpp-list li a:after { margin-right: 5px; }
-.wpp-list li { line-height: 22px; padding-bottom: 10px; }
+.wpp-list li { line-height: 18px; padding-bottom: 15px; }
 span.commentCount:hover { opacity: 1; }
 .wpp-comments.commentCount { font-size: .8rem;}
 .navmenu { display: none;}
@@ -1978,7 +1983,6 @@ text-transform: uppercase;
 /*#searchField input { background: url("images/black-search.png") no-repeat 0 1px #eee; text-transform: ; }*/
 /*#searchField input:focus { background: #fff; }*/
 .site-header { margin-top: 70px; }
-form#commentform { padding-left: 20px; }
 .nav-single + .comments-area { padding-left: 20px; }
 
 																						
@@ -1989,9 +1993,12 @@ form#commentform { padding-left: 20px; }
 
 
 @media(max-width:1024px) {
+													.site { width: 95%; }
+													#page { margin: auto;}
 													#secondary { display: none; }
 													.wpp { display: none; } 
-													#main { margin: 0 5% 0 10%; }
+													/*#main { margin: 0 5% 0 10%; }*/
+													#main { margin: auto; }
 											#masthead { 	position: absolute;
 																	 margin: 40px auto;
 																	float: none;
@@ -2000,7 +2007,6 @@ form#commentform { padding-left: 20px; }
 																}  
 													.site-content { margin-top: 200px; width: 90%; padding: 0; }			
 													#primary article { box-shadow: none; padding-left: 0; }
-													.site { width: 80%; }
 													#mobileNav { display: block; width: 100%; position: absolute; left: 0px; right: 35px; top: 0px; /*font-size: 2rem;*/ background-color: #e87b65; height: 30px; }
 													#mobileNav a { color: #fff;}
 													/*#navIcon { background: url("images/menuToggle.png") no-repeat;  }*/
@@ -2050,12 +2056,12 @@ form#commentform { padding-left: 20px; }
 													.comments-title { box-shadow: none; }
 													#content { box-shadow: none; }
 													#masthead { min-width: 22%; }
-													.postdate small { font-size: 1rem; display: inline; padding: 0; margin: 0;}
-													.postdate div { font-size: 1rem; font-weight: 300; display: inline; padding: 0; margin: 0;}
+													.postdate small { font-size: 1rem; display: inline; padding: 0; margin: 0; font-weight: 500; }
+													.postdate div { font-size: 1rem; display: inline; padding: 0; margin: 0; font-weight: 500; }
 													.site-header h1 a { padding: 10px; }
 													.nav-single + .comments-area { padding-left: 0; }
 													 form#commentform { padding-left: 0;}
-													 .entry-header .entry-title a { font-size: 1.4rem;}
+													 .entry-header .entry-title a { font-size: 1.4rem; line-height: 25px; }
 .searchbar { padding: 5px; }
 
 }
@@ -2070,7 +2076,7 @@ form#commentform { padding-left: 20px; }
 																		box-sizing: border-box;
 																	}
 																	.entry-content p img { display: block !important; width: auto !important; height: auto !important; }
-																	#main { margin: 0 5% 0 20%; }
+																	#main { margin: auto; }
 
 																	nav a {
 																		/*background: rgba(0,0,0,0.5);*/
@@ -2079,12 +2085,14 @@ form#commentform { padding-left: 20px; }
 																		margin: 0;
 																		box-sizing: border-box;
 																	}
-																	#masthead { min-width: 35%; left: 35%; }
+																	#masthead { min-width: 35%; left: 30%; }
 																	/*.postdate small { font-size: 1rem; }
 																	.postdate div { font-size: 1rem; font-weight: 300; }*/
 																	.nav-single + .comments-area { padding-left: 0;}
 																	.entry-header .entry-title a { font-size: 1.3rem; }
-
+.site-content article { padding-bottom: 5px;}
+.readmore { display: block; }
+a.read-more { width: 100%; text-align: center; }
 													}										
 
 
@@ -2238,3 +2246,4 @@ outline: none;
 .comment-meta > a { font-size: .7rem; text-align: right; }
 cite b.fn { color: #6C8390; }
 form#searchform div { float: right; }
+body.custom-background { background-color: #fff !important; }
