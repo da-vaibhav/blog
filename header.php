@@ -19,61 +19,75 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
-<title><?php wp_title( '|', true, 'right' ); ?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width" />
+	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+	<link rel="stylesheet" href="http://www.idyllic-software.com/blog/wp-content/themes/ISI-BLOG/css/shCoreDefault.css" />
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <?php wp_head(); ?>
+<script>
+	document.addEventListener('DOMContentLoaded', function(){
+		var searchInput = document.querySelector('.icon-search');
+		searchInput.onfocus = function(){
+		//console.log(this.hasAttribute('class'));
+		if ( this.hasAttribute( 'class' ) ) {
+			this.removeAttribute( 'class' );
+			this.setAttribute( 'class', 'showMe' );
+		} else {
+			this.removeAttribute( 'class' );
+		}
+	};
+
+	searchInput.onblur = function(){
+		this.removeAttribute( 'class' );
+		this.setAttribute( 'class', 'icon-search' );
+	};
+
+}, false);
+</script>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-<div id="mobileNav">
-	<a id="navIcon" href="#"></a>
-	<ul>
-	<?php //wp_get_archives( array( 'type' => 'monthly', 'limit' => 12 ) ); ?>
-	<?php //wp_get_archives('type=postbypost'); ?>
-	<!-- <a href="index.php?page_id=42">Page title</a> -->
-	</ul>
-
-</div>
-<nav class="mobnav">
-</nav>
+	<div id="page" class="hfeed site">
+		
+		<div id="mobileNav">
+			<a id="navIcon" href="#"> </a>
+		</div>
 
 
-	<header id="masthead" class="site-header" role="banner">
-		<hgroup>
-			<h1 class="site-title">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>
-			<img src="<?php bloginfo('template_directory'); ?>/images/blog-logo-copy4.png" alt="<?php bloginfo('name'); ?>">
-			</a>
-			</h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</hgroup>
+		<header id="masthead" class="site-header" role="banner">
+			<hgroup>
+				<h1 class="site-title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>
+						<img src="<?php bloginfo('template_directory'); ?>/images/blog-logo-copy4.png" alt="<?php bloginfo('name'); ?>" />
+					</a>
+				</h1>
+				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			</hgroup>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<!-- <h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3> -->
-			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
-			<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<!-- <h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3> -->
+				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
+				<?php //wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+			</nav><!-- #site-navigation -->
 
-		<?php $header_image = get_header_image();
-		if ( ! empty( $header_image ) ) : ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
+			<?php $header_image = get_header_image();
+			if ( ! empty( $header_image ) ) : ?>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="header" /></a>
 		<?php endif; ?>
 
-<div class="wpp">
-<h3>Popular Posts</h3>
-	<?php wpp_get_mostpopular(); ?>
-</div>
+		<div class="wpp">
+			<h3>Popular Posts</h3>
+			<?php wpp_get_mostpopular(); ?>
+		</div>
 
 	</header><!-- #masthead -->
 

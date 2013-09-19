@@ -20,11 +20,14 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-</body>
+
+<script type="text/javascript" src="http://www.idyllic-software.com/blog/wp-content/themes/ISI-BLOG/js/shCore.js"></script>
+<script type="text/javascript" src="http://www.idyllic-software.com/blog/wp-content/themes/ISI-BLOG/js/shAutoloader.js"></script>
+<script type="text/javascript" src="http://www.idyllic-software.com/blog/wp-content/themes/ISI-BLOG/js/shBrushJScript.js"></script>
 <script>
-	$('#mobileNav').click(function () {
-	$('.mobnav').slideToggle();
-	return false;
-});
+	alert('done');
+	SyntaxHighlighter.all();
+
 </script>
+</body>
 </html>

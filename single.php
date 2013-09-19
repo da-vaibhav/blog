@@ -8,10 +8,10 @@
  */
 
 get_header(); ?>
-<!-- <div id="searchField"> 
-				<?php //include ('searchform.php' ); ?>
-</div> -->
 	<div id="primary" class="site-content">
+		<div id="searchField"> 
+					<?php get_search_form(); ?>
+		</div>
 		<div id="content" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
