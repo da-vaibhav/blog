@@ -64,14 +64,14 @@
 
 
 		<header id="masthead" class="site-header" role="banner">
-			<hgroup>
-				<h1 class="site-title">
+			<!-- <hgroup> -->
+				<!-- <h1 class="site-title"> -->
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>
 						<img src="<?php bloginfo('template_directory'); ?>/images/blog-logo-copy4.png" alt="<?php bloginfo('name'); ?>" />
 					</a>
-				</h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</hgroup>
+				<!-- </h1> -->
+				<!-- <h2 class="site-description"><?php //bloginfo( 'description' ); ?></h2> -->
+			<!-- </hgroup> -->
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<!-- <h3 class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></h3> -->
