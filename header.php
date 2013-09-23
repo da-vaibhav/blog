@@ -76,13 +76,7 @@
 			<a id="navIcon" href="#"> </a>
 			<ul class="navlist">
 				<li class="li-one">
-						<a href="https://idyllic-software.com">Home</a>
-				</li>
-								<li class="li-one">
-						<a href="https://idyllic-software.com">Home</a>
-				</li>
-								<li class="li-one">
-						<a href="https://idyllic-software.com">Home</a>
+						<a href="http://www.idyllic-software.com">Home</a>
 				</li>
 			</ul>
 		</div>
@@ -91,7 +85,7 @@
 		<header id="masthead" class="site-header" role="banner">
 			<!-- <hgroup> -->
 				<!-- <h1 class="site-title"> -->
-					<a href="<?php //echo esc_url( home_url( '/' ) ); ?> htttp://www.idyllic-software.com" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?>
 						<img src="<?php bloginfo('template_directory'); ?>/images/blog-logo-copy4.png" alt="<?php bloginfo('name'); ?>" />
 					</a>
 				<!-- </h1> -->

@@ -485,7 +485,7 @@ function twentytwelve_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
 
-
+// for displaying excerpts instead of posts by vaibhav
 
 function new_excerpt_more( $more ) {
 	return '<div class="readmore"> <a class="read-more btn" href="'. get_permalink( get_the_ID() ) . '">Read More</a> </div>';

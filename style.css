@@ -4,7 +4,7 @@ Theme URI: http://wordpress.org/themes/twentytwelve
 Author: vaibhav chatarkar
 Author URI: www.vinodsobale.com
 Description: We’re a small, tight-knit team of Ruby on Rails developers with a lot of experience in the startup world. We believe in fast delivery, common sense solutions, doing what we love, and getting it right the first time.
-Version: 1.10
+Version: 1.11
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, gray, white, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -2020,7 +2020,7 @@ text-transform: uppercase;
 																	/*width: 18%;*/
 																}  
 													.site-content { margin-top: 30px; width: 100%; padding: 0; }			
-													#primary article { box-shadow: none; padding-left: 0; }
+													#primary article { box-shadow: none; padding-left: 0; padding-top: 0; }
 													#mobileNav { display: block; width: 100%; position: absolute; left: 0px; right: 35px; top: 0px; /*font-size: 2rem;*/ background-color: #e87b65; height: 30px; }
 													#navIcon { background: url("images/menuToggle.png") no-repeat 0 0 ; width: 20px; height: 20px; position: absolute; right: 10px; top: 10px; }
 													/*#navIcon:before { content: '\2261'; padding: 10px; float: right; font-size: 1.3rem; }*/
@@ -2117,8 +2117,11 @@ text-transform: uppercase;
 
 
 @media(max-width:1024px) and (min-width: 600px) {
-	#masthead { min-width: 25%; }
+	#masthead { min-width: 20%; }
 #nav-below { padding: 10px 0; }
+}
+@media(max-width:600px) and (min-width:400px) {
+	#masthead { min-width: 30%; }	
 }
 
 						/* END MEDIA QUERIES */
@@ -2270,3 +2273,4 @@ form#searchform div { float: right; }
 body.custom-background { background-color: #fff !important; }
 #respond form p { text-transform: none; }
 section.comment-content p { text-transform: none; 
+#placeholder { visibility: hidden; }
